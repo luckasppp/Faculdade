@@ -1,0 +1,23 @@
+Visão de Casos de Uso -> Tem a preocupação com a funcionalidade de um
+software.
+
+Visão Lógica -> Tem preocupação com a estrutura de classes e pacotes
+que um software precisa ter para ter organização e capacidade de
+navegação.
+
+Visão de Processo -> Tem a preocupação com o paralelismo (situação em
+que ocorrem acontencimentos concorrentes) e limite de falhas aceitáveis
+para o contexto de utilização do software.
+
+visão de Distribuição -> Tem a preocupação com a disponibilidade física
+e lógica do software. Em que tipos de equipamentos estarão envolvidos 
+(ecossistema) nesse software.
+
+Visão de Implementação -> Tem a preocupação com a organização por afinidade
+e funcionalidade para que haja uma organização.
+
+==> Arquitetura de software inclui o que é funcional e o que não
+é funcional;
+
+==> Os requisitos não-funcionais sutentam os requisitos funcionais.
+
