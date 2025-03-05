@@ -9,7 +9,7 @@ float subtracao(float n1, float n2){
 	return n1 - n2;
 }
 
-float muitiplicacao(float n1, float n2){
+float multiplicacao(float n1, float n2){
 	return n1 * n2;
 }
 

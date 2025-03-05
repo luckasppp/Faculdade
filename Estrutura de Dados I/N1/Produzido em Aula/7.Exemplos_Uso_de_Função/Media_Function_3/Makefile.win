@@ -1,17 +1,17 @@
-# Project: Prj_Calculadora_Avan
+# Project: Media_Function_3
 # Makefile created by Dev-C++ 5.11
 
-CPP      = g++.exe -D__DEBUG__
-CC       = gcc.exe -D__DEBUG__
+CPP      = g++.exe
+CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = main.o testeNum.o calculadora.o
-LINKOBJ  = main.o testeNum.o calculadora.o
-LIBS     = -L"C:/Users/lucas.damasceno/Desktop/Dev-Cpp/MinGW64/lib" -L"C:/Users/lucas.damasceno/Desktop/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+OBJ      = main.o
+LINKOBJ  = main.o
+LIBS     = -L"C:/Users/lucas.damasceno/Desktop/Dev-Cpp/MinGW64/lib" -L"C:/Users/lucas.damasceno/Desktop/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"C:/Users/lucas.damasceno/Desktop/Dev-Cpp/MinGW64/include" -I"C:/Users/lucas.damasceno/Desktop/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Users/lucas.damasceno/Desktop/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Users/lucas.damasceno/Desktop/Dev-Cpp/MinGW64/include" -I"C:/Users/lucas.damasceno/Desktop/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Users/lucas.damasceno/Desktop/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Users/lucas.damasceno/Desktop/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
-BIN      = Prj_Calculadora_Avan.exe
-CXXFLAGS = $(CXXINCS) -g3
-CFLAGS   = $(INCS) -g3
+BIN      = Media_Function_3.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
 RM       = rm.exe -f
 
 .PHONY: all all-before all-after clean clean-custom
@@ -26,9 +26,3 @@ $(BIN): $(OBJ)
 
 main.o: main.cpp
 	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
-
-testeNum.o: testeNum.cpp
-	$(CPP) -c testeNum.cpp -o testeNum.o $(CXXFLAGS)
-
-calculadora.o: calculadora.cpp
-	$(CPP) -c calculadora.cpp -o calculadora.o $(CXXFLAGS)
