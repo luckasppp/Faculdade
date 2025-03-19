@@ -1,0 +1,76 @@
+public abstract class Pessoa {
+    protected String nome;
+    protected Double rendaBruta;
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public Double getRendaBruta() {
+        return rendaBruta;
+    }
+
+    public void setRendaBruta(Double rendaBruta) {
+        this.rendaBruta = rendaBruta;
+    }
+
+    public abstract Double calcularIR();
+}
+
+public class PessoaFisica extends Pessoa {
+    private String rg;
+
+    public String getRG() {
+        return rg;
+    }
+
+    public void setRG(String rg) {
+        this.rg = rg;
+    }
+
+    public Double calcularIR() {
+        Double imposto;
+
+        if (this.rendaBruta < 1501) {
+            imposto = this.rendaBruta * 0;
+        } else if (this.rendaBruta < 3001) {
+            imposto = this.rendaBruta * 0.1;
+        } else if (this.rendaBruta < 10001) {
+            imposto = this.rendaBruta * 0.20;
+        } else {
+            imposto = this.rendaBruta * 0.27;
+        }
+        return imposto;
+    }
+}
+
+public class PessoaJuridica extends Pessoa {
+    private String cnpj;
+
+    public String getCNPJ() {
+        return cnpj;
+    }
+
+    public void setCNPJ(String cnpj) {
+        this.cnpj = cnpj;
+    }
+
+    public Double calcularIR() {
+        Double imposto;
+
+        if (this.rendaBruta < 30001) {
+            imposto = this.rendaBruta * 0;
+        } else if (this.rendaBruta < 50001) {
+            imposto = this.rendaBruta * 0.1;
+        } else if (this.rendaBruta < 90001) {
+            imposto = this.rendaBruta * 0.2;
+        } else {
+            imposto = this.rendaBruta * 0.27;
+        }
+        return imposto;
+    }
+}

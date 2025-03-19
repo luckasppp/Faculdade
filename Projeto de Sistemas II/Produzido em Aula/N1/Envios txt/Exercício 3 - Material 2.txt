@@ -1,0 +1,77 @@
+public class App {
+    public static void main(String[] args) throws Exception {
+        Cliente cliente = new Cliente();
+        cliente.inserir();
+        cliente.excluir();
+        cliente.localizar();
+
+        Fornecedor fornecedor = new Fornecedor();
+        fornecedor.inserir();
+        fornecedor.excluir();
+        fornecedor.localizar();
+
+        Produto produto = new Produto();
+        produto.inserir();
+        produto.excluir();
+        produto.localizar();
+    }
+}
+
+public interface DAO {
+    public void inserir();
+    public void excluir();
+    public void localizar();
+}
+
+public class Cliente implements DAO {
+    private int codigo;
+    private String nome;
+
+    public void inserir() {
+        System.out.println("Cliente inserido com sucesso!");
+    }
+
+    public void excluir() {
+        System.out.println("Cliente excluído com sucesso!");
+    }
+
+    public void localizar() {
+        System.out.println("Cliente localizado com sucesso!");
+    }
+
+}
+
+public class Fornecedor implements DAO {
+    private int ccnpj;
+    private String razaoSocial;
+
+    public void inserir() {
+        System.out.println("Fornecedor inserido com sucesso!");
+    }
+
+    public void excluir() {
+        System.out.println("Fornecedor excluído com sucesso!");
+    }
+
+    public void localizar() {
+        System.out.println("Fornecedor localizado com sucesso!");
+    }
+
+}
+
+public class Produto implements DAO {
+    private int numero;
+    private String descricao;
+
+    public void inserir() {
+        System.out.println("Produto inserido com sucesso!");
+    }
+
+    public void excluir() {
+        System.out.println("Produto excluído com sucesso!");
+    }
+
+    public void localizar() {
+        System.out.println("Produto localizado com sucesso!");
+    }
+}
