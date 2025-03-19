@@ -1,4 +1,4 @@
-public class PessoaFisica extends Pessoa{
+public class PessoaFisica extends Pessoa {
     private String rg;
 
     public String getRG() {
