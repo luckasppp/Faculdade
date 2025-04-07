@@ -1,4 +1,5 @@
 public interface EstadoConta {
-    Double sacar();
-    Double depositar(Double valor);
+    void sacar(double valor, Conta cc);
+
+    void depositar(double valor, Conta cc);
 }
