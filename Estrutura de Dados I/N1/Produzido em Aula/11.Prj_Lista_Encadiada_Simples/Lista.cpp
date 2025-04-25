@@ -16,20 +16,33 @@ No* insere_inicio(No* no, int valor) {
 	return novo_no;	
 }
 
+No* insere_fim(No* no, int valor) {
+	No* novo_no = (No*) malloc (sizeof(No));
+	novo_no->valor = valor;
+	novo_no->prox = NULL;
+	
+	if(vazia(no)) {
+		return novo_no;
+	} else {
+		No* no_aux = no;
+		for(;no_aux->prox != NULL; no_aux = no_aux->prox) {
+			no_aux->prox = novo_no;
+		}
+		return no;
+	}
+}
+
 void imprime_lista(No* no){
 	if(vazia(no)) {
 		cout << "Lista vazia!" << endl;
 	} else {
 		No* no_aux = no;
-		int qtd = 0;
-		cout << "L: ";
 		
-		for(;no_aux != NULL; no_aux = no_aux->prox, qtd++) {
+		cout << "L: ";
+		for(;no_aux != NULL; no_aux = no_aux->prox) {
 			cout << no_aux->info << " - ";
 		}
-		
 		cout << endl;
-		cout << "Tamanho da lista: " << qtd << endl;
 	}
 }
 
