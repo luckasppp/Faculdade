@@ -1,5 +1,6 @@
-// Lista.cpp
-#include "Lista.h"
+// lista.cpp
+
+#include "lista.h"
 
 No* inicializa() {
 	return NULL;
@@ -18,7 +19,7 @@ No* insere_inicio(No* no, int valor) {
 
 No* insere_fim(No* no, int valor) {
 	No* novo_no = (No*) malloc (sizeof(No));
-	novo_no->valor = valor;
+	novo_no->info = valor;
 	novo_no->prox = NULL;
 	
 	if(vazia(no)) {
@@ -26,8 +27,9 @@ No* insere_fim(No* no, int valor) {
 	} else {
 		No* no_aux = no;
 		for(;no_aux->prox != NULL; no_aux = no_aux->prox) {
-			no_aux->prox = novo_no;
+			// Percorre a lista até o último nó
 		}
+		no_aux->prox = novo_no;
 		return no;
 	}
 }
@@ -61,8 +63,9 @@ void imprime_fim(No* no) {
 	} else {
 		No* no_aux = no;
 		for(;no_aux->prox != NULL; no_aux = no_aux->prox) {
-			cout << "Fim: " << no_aux->info << endl;
+			// Percorre a lista até o último nó
 		}
+		cout << "Fim: " << no_aux->info << endl;
 	}
 }
 

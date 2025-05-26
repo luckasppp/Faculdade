@@ -1,12 +1,12 @@
-// Lista.h
+// lista.h
 #include <stdlib.h>
 #include <iostream>
 
 using namespace std;
 
-typedef struct _node {
+typedef struct _no {
 	int info;
-	struct _node* prox;
+	struct _no* prox;
 } No;
 
 No* inicializa();

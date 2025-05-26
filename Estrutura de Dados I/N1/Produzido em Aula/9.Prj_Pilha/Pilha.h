@@ -16,4 +16,3 @@ int size(Pilha* pilha);
 bool isEmpty(Pilha* pilha);
 int top(Pilha* pilha);
 void imprimir(Pilha* p);
-
