@@ -19,5 +19,5 @@ void imprime_fim(No* no);
 No* busca(No* no, int valor);
 No* retira(No* no, int valor);
 No* libera(No* no);
-int conta_impares(No* no);
-No* retira_fim(No* no);
+No* retira_inicio(No* no);
+int tamanho(No* no);

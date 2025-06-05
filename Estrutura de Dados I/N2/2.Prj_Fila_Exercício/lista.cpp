@@ -27,7 +27,7 @@ No* insere_fim(No* no, int valor) {
 	} else {
 		No* no_aux = no;
 		for(;no_aux->prox != NULL; no_aux = no_aux->prox) {
-			// Percorre a lista até o último nó
+			// Percorre a lista ate o ultimo no
 		}
 		no_aux->prox = novo_no;
 		return no;
@@ -114,32 +114,22 @@ No* libera(No* no) {
 	return inicializa();
 }
 
-int conta_impares(No* no) {
-	No* no_aux = no;
-	int cont = 0;
-	
-	if(no == NULL) {
-		cout << "Lista vazia" << endl;
-	} else {
-		for (;no_aux != NULL; no_aux = no_aux->prox) {
-			if(no_aux->info % 2 != 0) {
-				cont++;
-			}
-		}	
+No* retira_inicio(No* no) {
+	if (vazia(no)) {
+		cout << "Lista vazia! Nada a remover." << endl;
+		return no;
 	}
-	return cont;
+
+	No* temp = no;
+	no = no->prox;
+	free(temp);
+	return no;
 }
 
-No* retira_fim(No* no) {
-	No* no_aux = no;
-	if (no == NULL){
-		cout << "Lista vazia!" << endl;
-	} else {
-		for(;no_aux->prox != NULL ; no_aux = no_aux->prox) {
-			no_aux = no_aux->prox;
-		}
-		free(no_aux);
+int tamanho(No* no){
+	int cont = 0;
+	for(No* no_aux = no; no_aux != NULL; no_aux = no_aux->prox) {
+		cont++;
 	}
-	
-	return no;
+	return cont;
 }

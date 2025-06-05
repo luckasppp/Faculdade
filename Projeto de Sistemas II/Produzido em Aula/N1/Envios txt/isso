@@ -1,0 +1,18 @@
+QUESTÃO 1
+
+O diagrama de casos de uso é o mais adequado para representar a visão de casos de uso, pois ele descreve as funcionalidades
+do sistema do ponto de vista dos atore. Ele mostra as interações entre os atores e o sistema, capturando os requisitos funcionais.
+
+O diagrama de classes é o mais apropriado para a visão lógica, pois ele representa a estrutura estática do sistema, incluindo
+classes, atributos, métodos e relacionamentos entre eles. Ele ajuda a entender como o sistema é organizado em termos de objetos e suas interações.
+
+O diagrama de atividades é ideal para representar a visão de processo, pois ele descreve o fluxo de controle e de dados entre as
+atividades do sistema. Ele é útil para modelar processos de negócio, workflows e comportamentos complexos que envolvem múltiplos componentes.
+
+O diagrama de componentes é o mais adequado para a visão de implementação, pois ele mostra como o sistema é dividido em componentes
+físicos (como módulos, bibliotecas, executáveis) e como esses componentes estão organizados e interagem entre si. Ele ajuda a entender
+a estrutura física do sistema e suas dependências.
+
+O diagrama de implantação é o mais apropriado para a visão de distribuição, pois ele mostra a disposição física dos componentes do sistema
+em hardware, como servidores, nós de processamento e dispositivos de rede. Ele ajuda a entender como o sistema será distribuído e como os
+componentes se comunicam em um ambiente físico.
