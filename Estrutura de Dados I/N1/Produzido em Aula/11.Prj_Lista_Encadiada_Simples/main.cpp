@@ -20,6 +20,8 @@ int main(int argc, char** argv) {
 	no = insere_inicio(no, 22);
 	imprime_lista(no);
 	no = insere_inicio(no, 21);
+	int i = conta_impares(no);
+	cout << "Qtd Impares: " << i << endl;
 	//busca_msg(no, 22);
 	//busca_msg(no, 100);
 	no = retira(no, 20);

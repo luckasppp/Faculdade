@@ -97,3 +97,33 @@ No* libera(No* no) {
 	cout << "Lista liberada!" << endl;
 	return inicializa();
 }
+
+int conta_impares(No* no) {
+	No* no_aux = no;
+	int cont = 0;
+	
+	if(no == NULL) {
+		cout << "Lista vazia" << endl;
+	} else {
+		for (;no_aux != NULL; no_aux = no_aux->prox) {
+			if(no_aux->info % 2 != 0) {
+				cont++;
+			}
+		}	
+	}
+	return cont;
+}
+
+No* retira_fim(No* no) {
+	No* no_aux = no;
+	if (no == NULL){
+		cout << "Lista vazia!" << endl;
+	} else {
+		for(;no_aux->prox != NULL ; no_aux = no_aux->prox) {
+			no_aux = no_aux->prox;
+		}
+		free(no_aux);
+	}
+	
+	return no;
+}
